@@ -1,0 +1,23 @@
+#include<stack>
+#include<iostream>
+using namespace std;
+class cluster
+{
+	public:
+	stack< pair<int,int> > s;
+	int minx,miny,maxx,maxy;
+	void insert(int x,int y);
+	cluster();
+};
+
+class comparison1{
+	public:
+	bool operator() (const cluster& x1 , const cluster& x2){
+		return (x1.s.size() < x2.s.size());}
+	};
+
+class comparison2{
+	public:
+	bool operator() (const cluster& x1 , const cluster& x2){
+		return (x1.minx > x2.minx);}
+	};

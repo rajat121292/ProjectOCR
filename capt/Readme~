@@ -1,0 +1,13 @@
+To Decode CAPTCHA run the following command on terminal
+
+tar -xvf RenameMe
+qtmake -project
+qmake
+rm Makefile
+mv RenameMe Makefile
+make
+./capt
+
+
+#Now a window will po up in which there is option for browsing a captcha
+#pressing on Decode button it Decodes our Captcha
